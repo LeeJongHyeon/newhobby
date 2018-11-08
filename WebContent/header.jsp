@@ -26,13 +26,14 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="main.jsp">TRAVEL</a>
+			<a class="navbar-brand" href="main.do">HOBBY</a>
 		</div>
 		
 		<div class="navbar-collapse" id="nb-c1">
 			<ul class="nav navbar-nav">
-				<li><a href="main.jsp">메인</a></li>
-				<li><a href="boardList.jsp">취미</a></li>
+				<li><a href="main.do">메인</a></li>
+				<li><a href="hobbyList.do">취미</a></li>
+				<li><a href="admin.do">관리자</a></li>
 			</ul>
 			
 			<%
@@ -60,11 +61,11 @@
 					<a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button"
 						aria-haspopup="true" aria-expended="false">
-						회원관리<span class="caret"></span>
+						내 정보관리<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="myPage.jsp">내 정보</a></li>
-						<li><a href="logoutAction.jsp">로그아웃</a></li>
+						<li><a href="myPage.do">내 정보</a></li>
+						<li><a href="logout.do">로그아웃</a></li>
 					</ul>
 				</li>
 			</ul>

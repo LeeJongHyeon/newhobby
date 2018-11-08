@@ -45,7 +45,26 @@ public class MemberSQL {
 			success =  pstmt.executeUpdate();
 			
 		}catch(Exception e){
-			System.out.println("eror : " + e.toString()); 
+			e.printStackTrace();
+			System.out.println("ERROR SQL : " + sql); 
+		}
+		
+		return success;
+	}
+	
+	public int memberSelect(MemberVO member){ 	  
+		int success=0;
+		try{
+			sql="select pwd from member where member_id = ?)" ;
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString( 1, member.getMember_id());
+
+			
+			success =  pstmt.executeUpdate();
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("ERROR SQL : " + sql); 
 		}
 		
 		return success;
