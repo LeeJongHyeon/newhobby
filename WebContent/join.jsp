@@ -18,156 +18,158 @@
 	
 	<!-- 회원가입 정보 입력란 -->
 	<div class="container">
-		<div class="col-lg-1"></div>
-		<div class="col-lg-10">
-			<div
-				style="background-color: #f2f2f2; padding-top: 20px; padding-bottom: 20px; margin-bottom: 30px;">
-				
-				
-				<h2 align="center">-회원가입-</h2>
-				<br>
+		<h2 align="center">-회원가입-</h2>
+		<br>
 
-				<form id="joinForm" name="joinForm" method="post" action="joinAction.jsp">
+		<form id="joinForm" name="joinForm" method="post" action="joinAction.jsp">
 
-					<!-- 아이디 -->
-					<div class="form-group">
-						<div class="row">
-							<div class="divLeft" style="padding-right: 30px;">
-								<label>아이디</label>
-							</div>
-							<div class="divLeft">
-								<input type="text" class="form-control" name="memberId"
-									id="userId" placeholder="아이디를 입력해주세요" maxlength="60" size="30"
-									onkeyup="checklen(this, 30);"> 
-									<label id="userIdLabel"></label><br>
-							</div>
-							<div class="divLeft" style="padding-left: 15px;">
-								<button id="" type="button" class="btn btn-primary form-control"
+			<!-- 아이디 -->
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-6">
+						<label for="memberId">아이디</label>
+						<div class="input-group">
+							<input type="text" class="form-control" name="memberId"
+								id="memberId" placeholder="아이디를 입력해주세요" maxlength="60" size="30"
+								onkeyup="checklen(this, 30);">
+							<span class="input-group-btn">
+								<button id="" type="button" class="btn btn-primary"
 									onclick="checkId()">중복확인</button>
-							</div>
-							
-							
+							</span>
 						</div>
 					</div>
+					<div class="col-xs-3"><label id="idLabel"></label></div>
+				</div>
+			</div>
 
 
-					<p>
-						<!-- 패스워드 -->
-					<div class="form-group">
-						<div class="row">
-							<div class="divLeft" style="padding-right: 16px;">
-								<label>비밀번호</label>
-							</div>
-							<div class="divLeft">
-								<input type="password" class="form-control" name="pwd1"
-									id="pwd1" placeholder="6~16자 사이로 입력해주세요"
-									onkeyup="checklen(this,32); checkPwdReg();" maxlength="60" size="30">
-									<label id="pwdLabel1"></label><br>
-							</div>
-						</div>
+			
+				<!-- 패스워드 -->
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-6">
+						<label for="pwd1">비밀번호</label>
+						<input type="password" class="form-control" name="pwd1"
+						id="pwd1" placeholder="6~16자 사이로 입력해주세요"
+						onkeyup="checklen(this,32); checkPwdReg();" maxlength="60" size="30">
 					</div>
+					<div class="col-xs-3"><label id="pwdLabel1"></label></div>
+				</div>
+			</div>
 
 
 
-					<!-- 패스워드 확인 -->
-					<div class="form-group">
-						<div class="row">
-							<div class="divLeft" style="padding-right: 15px;">
-								<label style="text-align: center;">비밀번호<br>확인</label>
-							</div>
-							<div class="divLeft">
-								<input type="password" class="form-control" name="pwd2"
-									id="pwd2" onkeyup="checkPwd()" placeholder="비밀번호를 동일하게 입력해주세요"
-									maxlength="60" size="30"> <label id="pwdLabel2"></label><br>
-							</div>
-						</div>
+			<!-- 패스워드 확인 -->
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-6">
+						<label for="pwd2">비밀번호 확인</label>
+						<input type="password" class="form-control" name="pwd2"
+							id="pwd2" onkeyup="checkPwd()" placeholder="비밀번호를 동일하게 입력해주세요"
+							maxlength="60" size="30">
 					</div>
+					<div class="col-xs-3"><label id="pwdLabel2"></label></div>
+				</div>
+			</div>
 
 
 
-					<!-- 이름 입력 -->
-					<div class="form-group">
-						<div class="row">
-							<div class="divLeft" style="padding-right: 45px;">
-								<label>이름</label>
-							</div>
-							<div class="divLeft">
-								<input type="text" class="form-control" name="name" id="name"
-									placeholder="이름을 입력해 주세요" onkeyup="checklen(this,15)"
-									maxlength="15" size="24"><br>
-							</div>
-						</div>
-					</div>					
+			<!-- 이름 입력 -->
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-6">
+						<label for="name">이름</label>
+						<input type="text" class="form-control" name="name" id="name"
+							placeholder="이름을 입력해 주세요" onkeyup="checklen(this,15)"
+							maxlength="15" size="24">
+					</div>
+					<div class="col-xs-3"><label id="nameLabel"></label></div>
+				</div>
+			</div>			
+			
+			
 					
-					<!-- 성별 -->
-					<div class="form-group">
-						<div class="row">
-							<div class="divLeft" style="padding-right: 42px;">
-								<label>성별</label>
-							</div>
-							<div class="divLeft">
-								<input type="radio" value="남성">남성
-								<input type="radio" value="여성">여성
-							</div>
-						</div>
+			
+			<!-- 성별 -->
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-6">
+						<label>성별</label>
+						<label class="radio-inline" id="gender">
+							<input type="radio" name="gender" value="M" checked="checked">남성
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="gender" value="F">여성
+						</label>
 					</div>
+					<div class="col-xs-3"><label id="genderLabel"></label></div>
+				</div>
+			</div>
 
 
-					<!-- 우편번호 -->
-					<div class="form-group joinpadding">
-						<div class="row">
-							<div class="divLeft" style="padding-right: 15px;">
-								<label>우편번호</label>
-							</div>
-							<div class="divLeft" style="padding-right: 5px;">
-								<input type="text" class="form-control" size="10" id="zipCode"
-									name="zipCode" readonly>
-							</div>
-							<div class="divLeft" style="padding-right: 5px;">
+			<!-- 우편번호 -->
+			<div class="form-group joinpadding">
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-3">
+						<label for="zipCode">우편번호</label>
+						<div class="input-group">
+							<input type="text" class="form-control" size="10" id="zipCode"
+							name="zipCode" readonly>
+							<span class="input-group-btn">
 								<input type="button" class="btn btn-default"
 									onclick="DaumPostcode()" value="우편번호검색" />
-							</div>
-						</div>
-						<br>
-						<p>
-							<!-- 상세주소 -->
-						<div class="row">
-							<div class="divLeft" style="padding-right: 15px;">
-								<label>상세주소</label>
-							</div>
-							<div class="divLeft" style="padding-right: 5px;">
-								<input type="text" class="form-control" name="add1"
-									id="address1" size="30" readonly>
-							</div>
-							<div class="divLeft" style="=pazdding-right: 5px;">
-								<input type="text" class="form-control" name="add2"
-									id="address2" size="30" onkeyup="checklen(this,30)"
-									placeholder="나머지 주소를 입력 해 주세요"> <br>
-							</div>
+							</span>
 						</div>
 					</div>
-
-
-
-
-
-
-					<!-- 이벤트 처리 버튼 -->
-					<div class="row" align="center" style="padding-top: 20px; padding-bottom: 20px;">
-						<button id="addBtn" type="button" class="btngray btn btn-primary" onclick="check()">회원가입</button>
-						
-						<a href="main.jsp">
-							<button type="button" class="btngray btn btn-default">메인으로</button>
-						</a>
-						<button type="reset" class="btngray btn btn-default">다시작성</button>
-						 
+					<div class="col-xs-6"></div>
+				</div>
+				
+				
+				
+				
+				<!-- 상세주소 -->
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-6">
+						<label for="add1">상세주소</label>
+						<input type="text" class="form-control" name="add1"
+							id="add1" size="30" readonly>
 					</div>
-
-
-				</form>
+					<div class="col-xs-3"></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3"></div>
+					<div class="col-xs-6">
+						<input type="text" class="form-control" name="add2"
+							id="add2" size="30" onkeyup="checklen(this,30)"
+							placeholder="나머지 주소를 입력 해 주세요">
+					</div>
+					<div class="col-xs-3"><label id="addLabel"></label></div>				
+				</div>
 			</div>
-		</div>
-		<div class="col-lg-1"></div>
+
+
+
+
+
+
+			<!-- 이벤트 처리 버튼 -->
+			<div class="row" align="center" style="padding-top: 20px; padding-bottom: 20px;">
+				<button id="addBtn" type="button" class="btngray btn btn-primary" onclick="check()">회원가입</button>
+				
+				<a href="main.jsp">
+					<button type="button" class="btngray btn btn-default">메인으로</button>
+				</a>
+				<button type="reset" class="btngray btn btn-danger">다시작성</button>
+				 
+			</div>
+		</form>
 	</div>
 	
 	
@@ -178,5 +180,6 @@
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="src/bootstrap/js/bootstrap.js"></script>
+	<script src="src/js/join.js"></script>
 </body>
 </html>
