@@ -12,9 +12,9 @@
 <body>
 
 	<%
-		String userID = null;
-		if(session.getAttribute("userID") != null){
-			userID = (String)session.getAttribute("userID");
+		String memberID = null;
+		if(session.getAttribute("memberID") != null){
+			memberID = (String)session.getAttribute("memberID");
 		}
 	%>
 	<!-- 상단 네비게이션 바 -->
@@ -36,7 +36,7 @@
 			</ul>
 			
 			<%
-				if(userID == null){	
+				if(memberID == null){	
 			%>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
