@@ -32,7 +32,7 @@
 		<div class="navbar-collapse" id="nb-c1">
 			<ul class="nav navbar-nav">
 				<li><a href="main.jsp">메인</a></li>
-				<li><a href="boardList.jsp">게시판</a></li>
+				<li><a href="boardList.jsp">취미</a></li>
 			</ul>
 			
 			<%
@@ -46,8 +46,8 @@
 						접속하기<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="login.jsp">로그인</a></li>
-						<li><a href="provision.jsp">회원가입</a></li>
+						<li><a href="login.do">로그인</a></li>
+						<li><a href="join.do">회원가입</a></li>
 					</ul>
 				</li>
 			</ul>
