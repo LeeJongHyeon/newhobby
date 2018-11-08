@@ -52,15 +52,25 @@ public class MemberSQL {
 		return success;
 	}
 	
-	public int memberSelect(MemberVO member){ 	  
+	public int memberSelect(String member_id, String pwd){ 	  
 		int success=0;
 		try{
-			sql="select pwd from member where member_id = ?)" ;
+			sql="select pwd from member where member_id = ?" ;
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString( 1, member.getMember_id());
-
+			pstmt.setString( 1, member_id);
 			
-			success =  pstmt.executeUpdate();
+			result=pstmt.executeQuery();
+			
+			if (result.next()) {
+				if (result.getString(1).equals(pwd)) {
+					success = 1;
+				} else {
+					System.out.println("비밀번호가 일치하지 않습니다.");
+					System.out.println(result.getString(1));
+					System.out.println("pwd : "+pwd);
+					success = 0;
+				}
+			}
 			
 		}catch(Exception e){
 			e.printStackTrace();

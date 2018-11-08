@@ -1,13 +1,14 @@
 package net.hobby.controller.member;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import net.hobby.domain.MemberVO;
 import net.hobby.sql.MemberSQL;
 
 public class LoginController extends HttpServlet {
@@ -22,25 +23,29 @@ public class LoginController extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		try{
 			String member_id = request.getParameter("memberId");;
-			String pwd = request.getParameter("pwd2");;
-
-			MemberVO member = new MemberVO();
-			
-			member.setMember_id(member_id);
-			member.setPwd(pwd);
-
+			String pwd = request.getParameter("pwd");;
 			
 			MemberSQL sql = new MemberSQL();
+			int success = sql.memberSelect(member_id, pwd);
 			
-			int success = sql.memberInsert(member);
-			
+			HttpSession session = request.getSession();
+
 			if(success > 0){
-				System.out.println("회원가입 완료");
+				System.out.println("로그인 완료");
+				session.setAttribute("memberID", member_id);
 				response.sendRedirect("main.do");
+			} else {
+				System.out.println("로그인 실패");
+				PrintWriter script = response.getWriter();
+				script.println("<script>");
+				script.println("alert('비밀번호가 일치하지 않습니다.')");
+				script.println("location.href='login.do'");
+				script.println("</script>");
 			}
+			
+			
 		}catch(Exception e){ 
 			e.printStackTrace();
-			System.out.println("회원가입 실패");
 		}
 	}
 
