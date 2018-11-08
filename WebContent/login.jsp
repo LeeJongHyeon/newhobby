@@ -19,7 +19,7 @@
 		<div class="col-lg-3"></div>
 		<div class="col-lg-6">
 			<div class="jumbotron" style="padding-top:40px; height: 300px;">
-				<form method="post" action="loginAction.jsp" name="deleteUserFrom">
+				<form method="post" action="login.do" name="deleteUserFrom">
 					<h3 style="text-align: center;">로그인</h3>
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="아이디" name="memberId" maxlength="20">
