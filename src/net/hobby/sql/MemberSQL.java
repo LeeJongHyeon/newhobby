@@ -53,7 +53,7 @@ public class MemberSQL {
 	}
 	
 	public int memberSelect(String member_id, String pwd){ 	  
-		int success=0;
+		int success = 0;
 		try{
 			sql="select pwd from member where member_id = ?" ;
 			pstmt = conn.prepareStatement(sql);
@@ -66,8 +66,8 @@ public class MemberSQL {
 					success = 1;
 				} else {
 					System.out.println("비밀번호가 일치하지 않습니다.");
-					System.out.println(result.getString(1));
-					System.out.println("pwd : "+pwd);
+					System.out.println("DB pwd : " + result.getString(1));
+					System.out.println("input pwd : " + pwd);
 					success = 0;
 				}
 			}
