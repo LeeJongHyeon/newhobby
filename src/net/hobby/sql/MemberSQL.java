@@ -59,7 +59,7 @@ public class MemberSQL {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString( 1, member_id);
 			
-			result=pstmt.executeQuery();
+			result = pstmt.executeQuery();
 			
 			if (result.next()) {
 				if (result.getString(1).equals(pwd)) {
@@ -82,10 +82,10 @@ public class MemberSQL {
 	
 	
 	public int memberIdCheck(MemberVO member){ 	  
-		int count =0;
+		int count = 0;
 		try{
 			
-			sql="select count(*) from member where member_id = ?" ;
+			sql="select count(*) from member where member_id = ?";
 			pstmt = conn.prepareStatement(sql); 
 			pstmt.setString( 1, member.getMember_id());
 			

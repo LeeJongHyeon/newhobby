@@ -20,7 +20,7 @@
 				<form method="post" action="memberIdCheck.do" name="deleteUserFrom">
 					<h3 style="text-align: center;">중복확인</h3>
 					<div class="form-group">
-						<input type="text" class="form-control name="memberId" maxlength="20" value="${memberId }" readonly="readonly">
+						<input type="text" class="form-control" name="memberId" maxlength="20" value="${memberId }" readonly="readonly">
 					</div>
 					<input type="submit" class="btn btn-primary form-control" value="확인하기">
 				</form>
