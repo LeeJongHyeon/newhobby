@@ -81,6 +81,27 @@ public class MemberSQL {
 	}
 	
 	
+	public int memberIdCheck(MemberVO member){ 	  
+		int count =0;
+		try{
+			
+			sql="select count(*) from member where member_id = ?" ;
+			pstmt = conn.prepareStatement(sql); 
+			pstmt.setString( 1, member.getMember_id());
+			
+			result = pstmt.executeQuery();
+			if(result.next()) {
+				count = result.getInt(1);
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("ERROR SQL : " + sql); 
+		}
+		
+		return count;
+	}
+	
 }
 
 
