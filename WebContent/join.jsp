@@ -32,14 +32,14 @@
 						<div class="input-group">
 							<input type="text" class="form-control" name="memberId"
 								id="memberId" placeholder="아이디를 입력해주세요" maxlength="60" size="30"
-								onkeyup="checklen(this, 30);">
+								>
 							<span class="input-group-btn">
-								<button id="" type="button" class="btn btn-primary"
-									onclick="checkId()">중복확인</button>
+								<button id="checkId" type="button" class="btn btn-primary"
+									>중복확인</button>
 							</span>
 						</div>
 					</div>
-					<div class="col-xs-3"><label id="idLabel"></label></div>
+					<div class="col-xs-3"><span id="memberIdSpan"></span></div>
 				</div>
 			</div>
 
@@ -53,9 +53,9 @@
 						<label for="pwd1">비밀번호</label>
 						<input type="password" class="form-control" name="pwd1"
 						id="pwd1" placeholder="6~16자 사이로 입력해주세요"
-						onkeyup="checklen(this,32); checkPwdReg();" maxlength="60" size="30">
+						maxlength="60" size="32">
 					</div>
-					<div class="col-xs-3"><label id="pwdLabel1"></label></div>
+					<div class="col-xs-3"><span id="pwd1Span"></span></div>
 				</div>
 			</div>
 
@@ -68,10 +68,10 @@
 					<div class="col-xs-6">
 						<label for="pwd2">비밀번호 확인</label>
 						<input type="password" class="form-control" name="pwd2"
-							id="pwd2" onkeyup="checkPwd()" placeholder="비밀번호를 동일하게 입력해주세요"
-							maxlength="60" size="30">
+							id="pwd2" placeholder="비밀번호를 동일하게 입력해주세요"
+							maxlength="60" size="32">
 					</div>
-					<div class="col-xs-3"><label id="pwdLabel2"></label></div>
+					<div class="col-xs-3"><label id="pwd2Label"></label></div>
 				</div>
 			</div>
 
@@ -84,10 +84,10 @@
 					<div class="col-xs-6">
 						<label for="name">이름</label>
 						<input type="text" class="form-control" name="name" id="name"
-							placeholder="이름을 입력해 주세요" onkeyup="checklen(this,15)"
-							maxlength="15" size="24">
+							placeholder="이름을 입력해 주세요" 
+							maxlength="20" size="15">
 					</div>
-					<div class="col-xs-3"><label id="nameLabel"></label></div>
+					<div class="col-xs-3"><span id="nameSpan"></span></div>
 				</div>
 			</div>			
 			
@@ -107,7 +107,7 @@
 							<input type="radio" name="gender" value="F">여성
 						</label>
 					</div>
-					<div class="col-xs-3"><label id="genderLabel"></label></div>
+					<div class="col-xs-3"></div>
 				</div>
 			</div>
 
@@ -122,8 +122,8 @@
 							<input type="text" class="form-control" size="10" id="zipCode"
 							name="zipCode" readonly>
 							<span class="input-group-btn">
-								<input type="button" class="btn btn-default"
-									onclick="DaumPostcode()" value="우편번호검색" />
+								<input id="searchAdd" type="button" class="btn btn-default"
+									value="우편번호검색" />
 							</span>
 						</div>
 					</div>
@@ -139,7 +139,7 @@
 					<div class="col-xs-6">
 						<label for="add1">상세주소</label>
 						<input type="text" class="form-control" name="add1"
-							id="add1" size="30" readonly>
+							id="add1" readonly>
 					</div>
 					<div class="col-xs-3"></div>
 				</div>
@@ -147,10 +147,10 @@
 					<div class="col-xs-3"></div>
 					<div class="col-xs-6">
 						<input type="text" class="form-control" name="add2"
-							id="add2" size="30" onkeyup="checklen(this,30)"
+							id="add2" size="100"
 							placeholder="나머지 주소를 입력 해 주세요">
 					</div>
-					<div class="col-xs-3"><label id="addLabel"></label></div>				
+					<div class="col-xs-3"><span id="add2Span"></span></div>				
 				</div>
 			</div>
 
@@ -161,7 +161,7 @@
 
 			<!-- 이벤트 처리 버튼 -->
 			<div class="row" align="center" style="padding-top: 20px; padding-bottom: 20px;">
-				<button id="addBtn" type="button" class="btngray btn btn-primary" onclick="check()">회원가입</button>
+				<button id="addBtn" type="button" class="btngray btn btn-primary">회원가입</button>
 				
 				<a href="main.jsp">
 					<button type="button" class="btngray btn btn-default">메인으로</button>
