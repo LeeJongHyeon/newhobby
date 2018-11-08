@@ -21,7 +21,7 @@
 		<h2 align="center">-회원가입-</h2>
 		<br>
 
-		<form id="joinForm" name="joinForm" method="post" action="joinAction.jsp">
+		<form id="joinForm" name="joinForm" method="post" action="join.do">
 
 			<!-- 아이디 -->
 			<div class="form-group">
@@ -161,7 +161,7 @@
 
 			<!-- 이벤트 처리 버튼 -->
 			<div class="row" align="center" style="padding-top: 20px; padding-bottom: 20px;">
-				<button id="addBtn" type="button" class="btngray btn btn-primary" onclick="check()">회원가입</button>
+				<button id="addBtn" type="submit" class="btngray btn btn-primary">회원가입</button>
 				
 				<a href="main.jsp">
 					<button type="button" class="btngray btn btn-default">메인으로</button>
