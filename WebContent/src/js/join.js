@@ -25,7 +25,7 @@ $(function() {
 			return;
 		} 
 		$('#memberIdSpan').html("");
-		window.open("openCheckId.jsp?userId="+memberId,"","width=470,height=200,top=100,left=100");
+		window.open("memberIdCheck.do?memberId="+memberId,"","width=470,height=200,top=100,left=100");
 		flag_id_t();
 	});
 	
